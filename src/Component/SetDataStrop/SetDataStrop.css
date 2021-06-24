@@ -1,0 +1,17 @@
+.modalBack{
+    /* background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(210,178,212,1) 13%, rgba(196,180,217,1) 24%, rgba(181,216,220,1) 47%, rgba(176,183,224,1) 71%, rgba(148,187,233,1) 89%); */
+font-size:x-large;
+/* background-color: #eec0c6;
+background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%); */
+/* background: rgb(196,180,217);
+background: radial-gradient(circle, rgba(196,180,217,1) 22%, rgba(238,174,202,1) 39%, rgba(210,178,212,1) 49%, rgba(148,187,233,1) 54%, rgba(181,216,220,1) 58%, rgba(176,183,224,1) 71%); */
+height: 800px;
+/* background: rgb(196,180,217);
+background: radial-gradient(circle, rgba(196,180,217,1) 21%, rgba(210,178,212,1) 26%, rgba(148,187,233,1) 54%, rgba(181,216,220,1) 81%, rgba(238,174,202,1) 87%, rgba(176,183,224,1) 94%); */
+background-color: #f876de;
+background-image: linear-gradient(315deg, #f876de 0%, #b9d1eb 74%);
+}
+/* .settingForm{
+    border:solid 5px #8a458b88;
+} */

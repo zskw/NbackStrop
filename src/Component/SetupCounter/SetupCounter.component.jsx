@@ -90,6 +90,7 @@ const intervalClear=()=>{
       
       if (props.numbers[timeShowLength] === props.numbers[timeShowLength - props.nthNumber]) {
         setCounter("");
+        if(props.mode==="D")
         setReaction("آفرین درست انتخاب کردی");
 
         setResult((prevResult) => {
@@ -108,6 +109,7 @@ const intervalClear=()=>{
     }
     else {
       setCounter("");
+      if(props.mode==="D")
       setReaction("متاسفم اشتباه انتخاب کردی");
       setResult((prevResult) => {
         let tempResult = prevResult.falseAnswer;

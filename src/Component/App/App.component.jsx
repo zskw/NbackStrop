@@ -8,8 +8,8 @@ const App = () => {
         <div className="">
            
            
-            {/* <AppRouter/> */}
-            <SetDataStrop/>
+            <AppRouter/>
+            {/* <SetDataStrop/> */}
                
         </div>
     );

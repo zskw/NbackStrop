@@ -28,6 +28,7 @@ const Strop = (props) => {
   useEffect(() => {
 
     show();
+    console.log(asciiCode);
   }, []);
   const showSample = () => {
     setSample({ p: props.data[i].text, color: props.data[i].color });
@@ -105,6 +106,7 @@ const Strop = (props) => {
             tempResponse.push(tempResponseTime);
             setResponseTime(tempResponse);
             spaces[spaces.length - 1] = 1;
+            if(props.mode==="D")
             setFeedback("آفرین درست انتخاب کردی")
             if (temp - timeFixed < props.fixed + props.t) {
               clearTimeout(myisi);
@@ -129,6 +131,7 @@ const Strop = (props) => {
                 break;
               }
             if (findKey) {
+              if(props.mode==="D")
               setFeedback("متاسفم اشتباه انتخاب کردی");
               spaces[spaces.length - 1] = 1;
               let tempResponseTime = temp - timeShow[timeShow.length - 1]
@@ -150,7 +153,7 @@ const Strop = (props) => {
               }
             }
             else {
-              console.log("معتبر نیست");
+              //console.log("معتبر نیست");
             }
 
 

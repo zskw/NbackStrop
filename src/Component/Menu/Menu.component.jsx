@@ -14,8 +14,17 @@ const Menu = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
-                  <Link className="nav-link active ms-5 " to="/button"><h4>Nback</h4></Link> 
-              </li>             
+                  <Link className="nav-link active ms-5 " to="/nback"><h4>Nback</h4></Link> 
+              </li>     
+              <li className="nav-item">
+                  <Link className="nav-link active ms-5 " to="/strop"><h4>Strop</h4></Link> 
+              </li>  
+              <li className="nav-item">
+                  <Link className="nav-link active ms-5 " to="/gonogo"><h4>Gonogo</h4></Link> 
+              </li>  
+              <li className="nav-item">
+                  <Link className="nav-link active ms-5 " to="/cpt"><h4>Cpt</h4></Link> 
+              </li>       
             </ul>
 
           </div>
