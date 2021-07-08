@@ -1,0 +1,41 @@
+/* @font-face {
+    font-family: 'Yekan';
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.eot?#iefix') format('embedded-opentype'),
+     url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.woff') format('woff'),
+     url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.ttf') format('truetype');
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: 'Yekan';
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan-Bold.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan-Bold.eot?#iefix') format('embedded-opentype'),
+     url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan-Bold.woff') format('woff'),
+     url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  *{
+      font-family: 'Yekan';
+  } */
+  /* @font-face {font-family: "IRAN Sans"; src: url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.eot"); 
+    src: url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.woff2") format("woff2"),
+     url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.woff") format("woff"),
+      url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.svg#IRAN Sans") format("svg"); 
+  } 
+  *{
+    font-family:"IRAN Sans";
+  } */
+  @font-face {
+    font-family: Vazir;
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff2') format('woff2'),
+         url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff') format('woff'),
+         url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.ttf') format('truetype');
+    font-weight: normal;
+  }
+  *{
+    font-family:Vazir !important;
+  }

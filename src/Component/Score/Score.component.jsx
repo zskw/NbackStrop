@@ -1,6 +1,7 @@
 import scoreGif from '../../images/pngwing.com.png'
 import './Score.css'
-
+import {Link} from 'react-router-dom'
+import Menu from '../Menu/Menu.component'
 const Score = (props) => {
 
     let trueNumber = 0, falseNumber = 0;
@@ -8,23 +9,43 @@ const Score = (props) => {
     let omission;
     let commission = props.falseAnswer;
     let averageResponse=0;
+    let computeTime=[];
+    let responseTime=0;
     const computeTrueFalse = () => {
+        console.log(props.timeShowArray);
+        console.log(props.spaceArray);
+        console.log(props.andis);
+        for(let i=0;i<props.spaceArray.length;i++)
+        {
+            /*console.log(props.spaceArray[i]);
+            console.log(props.timeShowArray[i]);*/
+            let b=props.spaceArray[i]-props.timeShowArray[props.andis[i]];
+            computeTime.push(b)
+            responseTime+=b;
+        }
         for (let i = props.arrayNumber.length - 1; i > 0; i--) {
             if (props.arrayNumber[i] == props.arrayNumber[i - props.nth])
                 trueNumber++;
         }
         falseNumber = props.arrayNumber.length - trueNumber;
         omission = trueNumber - props.trueAnswer;
+        
         if(props.trueAnswer!==0)
-        averageResponse=props.response/props.trueAnswer;
-        /* console.log(falseNumber);
-         console.log(trueNumber);*/
+        {
+            responseTime=responseTime.toFixed(2);
+            averageResponse=responseTime/props.trueAnswer;
+            averageResponse=averageResponse.toFixed(2);
+        }
+     
+        console.log(computeTime);
+      
     }
 
     computeTrueFalse();
 
     return (
         <>
+        <Menu/>
             <div className="container">
                 <div className="row ">
                     <div className="col-12 d-flex justify-content-center">
@@ -99,6 +120,14 @@ const Score = (props) => {
                                     </tr>
                                     <tr>
                                         <td>
+                                            حالت
+                                        </td>
+                                        <td>
+                                            {props.modeShow}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             Commission
                                         </td>
                                         <td>
@@ -118,7 +147,7 @@ const Score = (props) => {
                                             مجموع زمان پاسخ صحیح
                                         </td>
                                         <td>
-                                            {props.response}
+                                            {responseTime}
                                         </td>
                                     </tr>
 
@@ -136,6 +165,7 @@ const Score = (props) => {
                         </div>
                     </div>
                 </div>
+           
             </div>
 
         </>

@@ -96,7 +96,7 @@ const Strop = (props) => {
         }
         if (sw) {
           temp = Date.now();
-          if (event.keyCode === asciiCode[cnt].codeE || event.keyCode === asciiCode[cnt].codeF) {
+          if (event.keyCode === asciiCode[cnt].codeEs || event.keyCode === asciiCode[cnt].codeEc) {
 
             let tempResponseTime = temp - timeShow[timeShow.length - 1]
             let tempResponse = responseTime;
@@ -107,7 +107,7 @@ const Strop = (props) => {
             setResponseTime(tempResponse);
             spaces[spaces.length - 1] = 1;
             if(props.mode==="D")
-            setFeedback("آفرین درست انتخاب کردی")
+            setFeedback("درست")
             if (temp - timeFixed < props.fixed + props.t) {
               clearTimeout(myisi);
               showIsi();
@@ -126,13 +126,13 @@ const Strop = (props) => {
           else {
             let findKey = false;
             for (let i_ascii = 0; i_ascii < asciiCode.length; i_ascii++)
-              if (event.keyCode === asciiCode[i_ascii].codeE || event.keyCode === asciiCode[i_ascii].codeF) {
+              if (event.keyCode === asciiCode[i_ascii].codeEs || event.keyCode === asciiCode[i_ascii].codeEc) {
                 findKey = true;
                 break;
               }
             if (findKey) {
               if(props.mode==="D")
-              setFeedback("متاسفم اشتباه انتخاب کردی");
+              setFeedback("غلط");
               spaces[spaces.length - 1] = 1;
               let tempResponseTime = temp - timeShow[timeShow.length - 1]
               let tempResponse = responseTime;
@@ -174,7 +174,7 @@ const Strop = (props) => {
 
       {done === false ? <StropShow sample={sample} showReaction={feedback} /> :
         <StropScore typeSample={typeSample} trueFalse={trueFalse}
-          responseTime={responseTime} timeIsi={props.isi} timeT={props.t} />}
+          responseTime={responseTime} timeIsi={props.isi} timeT={props.t} modeShow={props.mode} />}
 
     </>
   )

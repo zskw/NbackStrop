@@ -1,5 +1,6 @@
 import scoreGif from '../../images/pngwing.com.png'
-
+import {Link} from 'react-router-dom'
+import Menu from '../Menu/Menu.component'
 const StropScore = (props) => {
 
     let numberObject = props.typeSample.length;
@@ -16,6 +17,8 @@ const StropScore = (props) => {
     let noAnswerIncong = 0;
     let interferenceScore = 0;
     let totalFalse = 0;
+    let trueCong = 0;
+    let trueIncong = 0;
     const computeScore = () => {
         for (let j = 0; j < numberObject; j++) {
             if (props.typeSample[j] == "cong") {
@@ -46,21 +49,40 @@ const StropScore = (props) => {
             }
         }
         if (congTime)
+        {
+            
             avgCongTime = congTime / numberCong;
+          
+        }
+            
         if (incongTime)
+        {
+           
             avgIncongTime = incongTime / numberIncong;
+          
+        }
+           
 
         sumResponse = congTime + incongTime;
         interferenceScore = avgIncongTime - avgCongTime;
         totalFalse = falseCong + falseIncong + noAnswerCong + noAnswerIncong;
         falseIncong += noAnswerIncong;
         falseCong += noAnswerCong;
+       trueCong=numberCong-falseCong;
+       trueIncong=numberIncong-falseIncong;
+       incongTime=incongTime.toFixed(2);
+       avgIncongTime=avgIncongTime.toFixed(2);
+       sumResponse=sumResponse.toFixed(2);
+       congTime=congTime.toFixed(2);
+       avgCongTime=avgCongTime.toFixed(2);
+       interferenceScore=interferenceScore.toFixed(2);
     }
 
     computeScore();
 
     return (
         <>
+        <Menu/>
             <div className="container">
                 <div className="row ">
                     <div className="col-12 d-flex justify-content-center">
@@ -95,6 +117,22 @@ const StropScore = (props) => {
                                     </tr>
                                     <tr>
                                         <td>
+                                            حالت
+                                        </td>
+                                        <td>
+                                            {props.modeShow}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            تعداد پاسخ صحیح همخوان
+                                        </td>
+                                        <td>
+                                            {trueCong}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             مجموع پاسخ به محرک های همخوان
                                         </td>
                                         <td>
@@ -107,6 +145,14 @@ const StropScore = (props) => {
                                         </td>
                                         <td>
                                             {avgCongTime}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            تعداد پاسخ صحیح ناهمخوان
+                                        </td>
+                                        <td>
+                                            {trueIncong}
                                         </td>
                                     </tr>
                                     <tr>
@@ -191,6 +237,9 @@ const StropScore = (props) => {
                         </div>
                     </div>
                 </div>
+           
+                
+           
             </div>
 
         </>

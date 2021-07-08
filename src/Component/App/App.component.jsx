@@ -1,6 +1,7 @@
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import AppRouter from '../../Router'
 import SetDataStrop from '../SetDataStrop/SetDataStrop.component'
+import './App.css'
 const App = () => {
 
 
